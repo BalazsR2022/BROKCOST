@@ -16,7 +16,7 @@ public class FileHandler<CostProject> {
             FileWriter fw = new FileWriter("adat.txt", true);
             fw.write(cost.transport.toString());
             fw.write(":");
-            fw.write(cost.shop.toString());
+            fw.write(cost.business.toString());
             fw.write(":");
             fw.write(cost.repair.toString());
             fw.write("\n");

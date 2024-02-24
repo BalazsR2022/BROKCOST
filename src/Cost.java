@@ -8,7 +8,7 @@
 public class Cost {
 
         Double transport;
-        Double shop;
+        Double business;
         Double repair;
         Double project;
 
@@ -16,7 +16,7 @@ public class Cost {
 
         try{
         this.transport = Double.parseDouble(transport);
-        this.shop = Double.parseDouble(shop);
+        this.business = Double.parseDouble(shop);
         this.repair = Double.parseDouble(repair);
     }
 
@@ -24,7 +24,7 @@ public class Cost {
         System.out.println("Hibás adatbevitel"+ e.getMessage());
         this.transport = 0.0;
         this.repair =  0.0;
-        this.shop = 0.0;
+        this.business = 0.0;
 }
    
     }

@@ -29,16 +29,16 @@ public class MainConsole {
 
     private void readCost() {
         String costTransport = readInput("Szállítási költség: ");
-        String costShop = readInput("Üzleti költség: ");
+        String costBusiness = readInput("Üzleti költség: ");
         String costRepair = readInput("Javítási költség: ");
 
         double transportValue = parseCost(costTransport);
-        double shopValue = parseCost(costShop);
+        double shopValue = parseCost(costBusiness);
         double repairValue = parseCost(costRepair);
         costProject = calculateProjectCost(transportValue, shopValue, repairValue);
 
         printProjectCost();
-        writeCostToFile(costTransport, costShop, costRepair);
+        writeCostToFile(costTransport, costBusiness, costRepair);
     }
 
     private String readInput(String prompt) {
@@ -60,8 +60,8 @@ public class MainConsole {
         System.out.println("Projekt költség: " + costProject);
     }
 
-    private void writeCostToFile(String costTransport, String costShop, String costRepair) {
-        Cost cost = new Cost(costTransport, costShop, costRepair);
+    private void writeCostToFile(String costTransport, String costBusiness, String costRepair) {
+        Cost cost = new Cost(costTransport, costBusiness, costRepair);
         FileHandler fileHandler = new FileHandler();
         fileHandler.costWriter(cost);
     }
